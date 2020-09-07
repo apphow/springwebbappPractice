@@ -11,12 +11,11 @@ public class Publisher {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
     private String addessLine1;
     private String city;
     private String state;
     private String zip;
-    private String publisher;
+    private String publisherName;
 
 
     @OneToMany// the publisher is one and it has many books
@@ -26,21 +25,14 @@ public class Publisher {
     public Publisher() {
     }
 
-    public String getPublisher() {
-        return publisher;
+    public String getPublisherName() {
+        return publisherName;
     }
 
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
+    public void setPublisherName(String publisher) {
+        this.publisherName = publisher;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getAddessLine1() {
         return addessLine1;
@@ -94,7 +86,7 @@ public class Publisher {
     public String toString() {
         return "Publisher{" +
                 "id=" + id +
-                ", publisher='" + publisher + '\'' +
+                ", publisher='" + publisherName + '\'' +
                 ", book='" + books + '\'' +
                 '}';
     }

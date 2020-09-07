@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Aprils Spring Boot</title>
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+        th{
+            background-color: #4287f5;
+        }
+        th,
+        td {
+            width: 250px;
+            text-align: center;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+<body>
+<div style="text-align: center;">
+    <h1>Publisher List</h1>
+    <table align="center">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+        <tr th:each="publisher : ${publishers}">
+            <td th:text="${publisher.id}">123</td>
+            <td th:text="${publisher.publisherName}">Spring into Action</td>
+            <td th:text="${publisher.city}">Wrox</td>
+
+        </tr>
+    </table>
+</div>
+</body>
+</html>
