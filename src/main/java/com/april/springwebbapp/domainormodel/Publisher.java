@@ -86,8 +86,11 @@ public class Publisher {
     public String toString() {
         return "Publisher{" +
                 "id=" + id +
-                ", publisher='" + publisherName + '\'' +
-                ", book='" + books + '\'' +
+                ", addessLine1='" + addessLine1 + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                ", publisherName='" + publisherName + '\'' +
                 '}';
     }
 

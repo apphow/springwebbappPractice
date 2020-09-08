@@ -27,13 +27,17 @@
     <table align="center">
         <tr>
             <th>ID</th>
-            <th>Name</th>
+            <th>Publisher</th>
+            <th>Street Address</th>
             <th>City</th>
+            <th>Zip</th>
         </tr>
         <tr th:each="publisher : ${publishers}">
             <td th:text="${publisher.id}">123</td>
             <td th:text="${publisher.publisherName}">Spring into Action</td>
+            <td th:text="${publisher.addessLine1}">Main St.</td>
             <td th:text="${publisher.city}">Wrox</td>
+            <td th:text="${publisher.zip}">94553</td>
 
         </tr>
     </table>

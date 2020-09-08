@@ -21,4 +21,5 @@ public class AuthorController {
 
         return "authors/list";
     }
+
 }
