@@ -1,5 +1,5 @@
 package com.april.springwebbapp.domainormodel;
-
+// https://www3.ntu.edu.sg/home/ehchua/programming/java/J3a_OOPBasics.html
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,20 +10,23 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    // The private instance variables
     private String firstName;
     private String lastName;
 
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
 
+    // construct an author instance with the listed
+    // inputs
     public Author(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
+    // default constructor
     public Author() {
     }
+    // public getters and setters for the private instance variables.
 
     public Long getId() { return id;}
 

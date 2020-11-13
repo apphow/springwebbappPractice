@@ -10,7 +10,6 @@ public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String addessLine1;
     private String city;
     private String state;
@@ -32,8 +31,6 @@ public class Publisher {
     public void setPublisherName(String publisher) {
         this.publisherName = publisher;
     }
-
-
     public String getAddessLine1() {
         return addessLine1;
     }

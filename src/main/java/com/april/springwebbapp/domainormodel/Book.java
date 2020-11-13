@@ -18,10 +18,10 @@ public class Book {
     private Publisher publisher;
 
      //we'll have a table for book and author in our db, so we use a join table
-   /* @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
+    @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
        inverseJoinColumns = @JoinColumn(name ="author_id"))
        // this holds the relationship in the author and book table
-    */
+
      @ManyToMany
      private Set<Author> authors = new HashSet<>();
 
